@@ -6,7 +6,6 @@
 //
 
 #import "JTDateHelper.h"
-#import "EpilExperience-Swift.h"
 
 @interface JTDateHelper (){
     NSCalendar *_calendar;
