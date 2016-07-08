@@ -6,6 +6,7 @@
 //
 
 #import "JTDateHelper.h"
+#import "EpilExperience-Swift.h"
 
 @interface JTDateHelper (){
     NSCalendar *_calendar;
@@ -23,8 +24,8 @@
 #else
         _calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 #endif
-        _calendar.timeZone = [NSTimeZone localTimeZone];
-        _calendar.locale = [NSLocale currentLocale];
+        _calendar.timeZone = [NSTimeZone timeZoneWithName:@"CET"];
+        _calendar.locale = [NSLocale localeWithLocaleIdentifier:@"it_IT"];
     }
     
     return _calendar;
@@ -38,6 +39,13 @@
     dateFormatter.locale = self.calendar.locale;
     
     return dateFormatter;
+}
+
+- (NSDateFormatter *)createDateFormatterForEEMonthTitle
+{
+  NSDateFormatter *dateFormatter = [MonthTitleDateFormatter new];
+
+  return dateFormatter;
 }
 
 #pragma mark - Operations
