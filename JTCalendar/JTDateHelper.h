@@ -11,7 +11,6 @@
 
 - (NSCalendar *)calendar;
 - (NSDateFormatter *)createDateFormatter;
-- (NSDateFormatter *)createDateFormatterForEEMonthTitle;
 
 - (NSDate *)addToDate:(NSDate *)date months:(NSInteger)months;
 - (NSDate *)addToDate:(NSDate *)date weeks:(NSInteger)weeks;

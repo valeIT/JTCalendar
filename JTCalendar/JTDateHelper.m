@@ -41,13 +41,6 @@
     return dateFormatter;
 }
 
-- (NSDateFormatter *)createDateFormatterForEEMonthTitle
-{
-  NSDateFormatter *dateFormatter = [MonthTitleDateFormatter new];
-
-  return dateFormatter;
-}
-
 #pragma mark - Operations
 
 - (NSDate *)addToDate:(NSDate *)date months:(NSInteger)months
